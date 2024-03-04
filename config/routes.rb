@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   get "dogs", to: "dogs#index"
   # Defines the root path route ("/")
+  delete '/dogs/:id', to: 'dogs#destroy'
   get "dogs/new", to: "dogs#new"
   post "dogs", to: "dogs#create"
 end
