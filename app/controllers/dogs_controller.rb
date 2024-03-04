@@ -1,4 +1,8 @@
 class DogsController < ApplicationController
+  def show
+    @dog = Dog.find(params[:id])
+  end 
+  
   def destroy
     @dog = Dog.find(params[:id])
     @dog.destroy
