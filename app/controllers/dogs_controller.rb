@@ -1,14 +1,14 @@
 class DogsController < ApplicationController
   def show
     @dog = Dog.find(params[:id])
-  end 
-  
+  end
+
   def destroy
     @dog = Dog.find(params[:id])
     @dog.destroy
     redirect_to dogs_path, status: :see_other
   end
-  
+
   def index
     @dogs = Dog.all
   end
