@@ -36,3 +36,12 @@
     </div>
   </div>
 </div>
+
+<h1>Rentals</h1>
+<ul>
+<li><% @rentals.each do |rental|%></li>
+<li ><%= rental.status %></li>
+<% end %>
+</ul>
+
+<%= link_to "Create a rental", "#", class: "btn btn-flat" %>

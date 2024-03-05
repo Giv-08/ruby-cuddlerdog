@@ -12,9 +12,14 @@ Rails.application.routes.draw do
   get "dogs/:id/edit", to: "dogs#edit"
   post "dogs", to: "dogs#create"
   patch "dogs/:id", to: "dogs#update"
-  # Defines the root path route ("/")
   delete '/dogs/:id', to: 'dogs#destroy'
+  
   get '/rentals', to: 'rentals#index'
+  get "rentals/new", to: "rentals#new"
   get '/rentals/:id', to: 'rentals#show'
+  post "rentals", to: "rentals#create"
+  get "rentals/:id/edit", to: "rentals#edit"
+  patch "rentals/:id", to: "rentals#update"
+  delete '/rentals/:id', to: 'rentals#destroy'
 
 end
