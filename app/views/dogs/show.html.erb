@@ -2,7 +2,11 @@
   <div class="title-dogname">
     <h1>Welcome to <%= @dog.name %> page</h1>
     <div>
-      <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill%>
+      <% if @dog.photo.attached? %>
+        <%= cl_image_tag @dog.photo.key, width: 400, height: 300, crop: :fill %>
+      <% else %>
+        <p><%= @dog.name %> is shy and doesn't have a picture yet🙈</p>
+      <% end %>
     </div>
   </div>
 
