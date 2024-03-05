@@ -1,7 +1,9 @@
 <div>
   <div class="title-dogname">
     <h1>Welcome to <%= @dog.name %> page</h1>
-    <img src="<%= @dog.photo.url %>" alt="Photo of <%= @dog.name %>">
+    <div>
+      <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill%>
+    </div>
   </div>
 
   <div class="body">
