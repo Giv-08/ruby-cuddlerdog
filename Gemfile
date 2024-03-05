@@ -53,6 +53,7 @@ gem "sassc-rails"
 
 # adding photos using Cloudinary
 gem "dotenv-rails", require: "dotenv/rails-now"
+gem "cloudinary"
 
 group :development, :test do
   gem "dotenv-rails"

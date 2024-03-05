@@ -5,7 +5,8 @@
   <% @dogs.each do |dog| %>
     <div class="card">
       <div class="card-header">
-        <%= image_tag(dog.photo.variant(resize: '300x3000'), class: 'dog-photo') if dog.photo.attached? %>
+        <%# <%= image_tag(dog.photo.variant(resize: '300x300'), class: 'dog-photo') if dog.photo.attached? %>
+        <%= cl_image_tag(dog.public_id, width: 400, height: 300, crop: :fill) %>
         <h2><%= dog.name %></h2>
         <p><%= dog.breed %></p>
         <p><%= dog.price %></p>
