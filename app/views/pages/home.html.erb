@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="text-center my-2">Welcome to cuddlerdog</h1>
+<ul class="container list-unstyled">
+  <% @dog.each do |dog| %>
+  <li class=" border border-success my-2">
+    <%= dog.name %><br/>
+    <%= dog.description %>
+    <%= link_to "Read more", dog_path(dog) %>
+  </li>
+  <% end %>
+</ul>

@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.button{
+
+  background-color: aqua;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+}
+.dogs-listing{
+  border: solid black;
+  display: flex;
+
+}
+.dog-detail{
+  justify-content: center;
+}
