@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   patch "dogs/:id", to: "dogs#update"
   # Defines the root path route ("/")
   delete '/dogs/:id', to: 'dogs#destroy'
+
+  get '/rentals', to: 'rentals#index'
+  get '/rentals/:id', to: 'rentals#show'
 end
