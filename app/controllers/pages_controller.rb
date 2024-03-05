@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
   def home
+    @dog = Dog.all
   end
 
-  def show
-    
+  def dashboard
     @user = current_user
   end
+  
 end
