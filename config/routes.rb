@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   delete '/dogs/:id', to: 'dogs#destroy'
   get "dogs/new", to: "dogs#new"
   post "dogs", to: "dogs#create"
+
+  get '/rentals', to: 'rentals#index'
+  get '/rentals/:id', to: 'rentals#show'
 end
