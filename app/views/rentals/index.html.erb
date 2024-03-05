@@ -1,3 +1,4 @@
+<%# navbar %>
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
@@ -40,8 +41,8 @@
 <h1>Rentals</h1>
 <ul>
 <li><% @rentals.each do |rental|%></li>
-<li ><%= rental.status %></li>
+<li >Rental status<%= rental.status %></li>
 <% end %>
 </ul>
 
-<%= link_to "Create a rental", "#", class: "btn btn-flat" %>
+<%= link_to "Create a rental", new_dog_rental_path, class: "btn btn-flat" %>

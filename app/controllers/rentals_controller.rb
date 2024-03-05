@@ -10,13 +10,17 @@ class RentalsController < ApplicationController
   end
 
   def new
+    @dog = Dog.find(params[:dog_id])
     @rental = Rental.new
-    @rental.save
   end
 
   def create
-    @rental = Rental.new(rental_params)
-    @rental.rental = current_rental
+    @rental = Rental.new(**rental_params, dog_id: @dog)
+    # @rental.dog_id = @dog
+    @rental.user = current_user
+    @rental.start_date = Date.parse(rental_params[:start_date])
+    @rental.end_date = Date.parse(rental_params[:end_date])
+    raise
     if @rental.save
       redirect_to root_path, notice: "rental created successfully"
     else
@@ -43,6 +47,6 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:rental).permit(:status)
+    params.require(:rental).permit(:status, :start_date, :end_date)
   end
 end
