@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :dogs
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
@@ -15,7 +14,7 @@ Rails.application.routes.draw do
   patch "dogs/:id", to: "dogs#update"
   # Defines the root path route ("/")
   delete '/dogs/:id', to: 'dogs#destroy'
-
   get '/rentals', to: 'rentals#index'
   get '/rentals/:id', to: 'rentals#show'
+
 end
