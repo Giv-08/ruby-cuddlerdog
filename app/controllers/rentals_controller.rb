@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  skip_before_action :authenticate_rental!, only: :home
+  # skip_before_action :authenticate_rental!, only: :home
 
   def show
     @rental = Rental.find(params[:id])
@@ -21,6 +21,7 @@ class RentalsController < ApplicationController
       redirect_to root_path, notice: "rental created successfully"
     else
       render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

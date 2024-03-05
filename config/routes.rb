@@ -15,5 +15,10 @@ Rails.application.routes.draw do
   post "dogs", to: "dogs#create"
 
   get '/rentals', to: 'rentals#index'
+  get "rentals/new", to: "rentals#new"
   get '/rentals/:id', to: 'rentals#show'
+  post "rentals", to: "rentals#create"
+  get "rentals/:id/edit", to: "rentals#edit"
+  patch "rentals/:id", to: "rentals#update"
+  delete '/rentals/:id', to: 'rentals#destroy'
 end
