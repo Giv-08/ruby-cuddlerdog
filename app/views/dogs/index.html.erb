@@ -5,6 +5,8 @@
   <% @dogs.each do |dog| %>
     <div class="card">
       <div class="card-header">
+        <%# <%= image_tag(dog.photo.variant(resize: '300x300'), class: 'dog-photo') if dog.photo.attached? %>
+        <%= cl_image_tag(dog.public_id, width: 400, height: 300, crop: :fill) %>
         <h2><%= dog.name %></h2>
         <p><%= dog.breed %></p>
         <p><%= dog.price %></p>
@@ -15,7 +17,7 @@
       <div class="card-footer">
         <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
         <%= link_to 'Edit', edit_dog_path(dog), class: 'btn btn-info' %>
-        <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?", class: 'btn btn-secondary' } %>
+        <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(dog.name)}?"}, class: 'btn btn-secondary' %>
       </div>
     </div>
   <% end %>

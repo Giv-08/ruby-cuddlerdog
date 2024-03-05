@@ -1,4 +1,24 @@
-<p>hello</p>
 <div>
-  <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill%>
+  <div class="title-dogname">
+    <h1>Welcome to <%= @dog.name %> page</h1>
+    <div>
+      <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill%>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="body-doginfo">
+      <p>Breed: <%= @dog.breed %> </p>
+      <p>Cost: <%= @dog.price %></p>
+    </div>
+    <div class="description">
+      <p>Little bit about our sweet <%= @dog.name %>, the <%= @dog.breed %> </p>
+      <p> <%= @dog.description %> </p>
+    </div>
+  </div>
+  <div class="footer">
+        <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
+        <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
+        <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
+  </div>
 </div>
