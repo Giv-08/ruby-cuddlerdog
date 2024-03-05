@@ -1,31 +1,10 @@
 class DogsController < ApplicationController
-  def show
-    @dog = Dog.find(params[:id])
-  end
-
-  def destroy
-    @dog = Dog.find(params[:id])
-    @dog.destroy
-    redirect_to dogs_path, status: :see_other
-  end
-
   def index
     @dogs = Dog.all
   end
 
-  def edit
+  def show
     @dog = Dog.find(params[:id])
-  end
-
-  def update
-    @dog = Dog.find(params[:id])
-    @dog.update(params[:dog])
-    redirect_to dog_path(@dog)
-  end
-
-  def new
-    @dog = Dog.new
-    @dog.save
   end
 
   def create
@@ -38,10 +17,32 @@ class DogsController < ApplicationController
     end
   end
 
+  def edit
+    @dog = Dog.find(params[:id])
+  end
+
+  def new
+    @dog = Dog.new
+    @dog.save
+  end
+
+  def update
+    @dog = Dog.find(params[:id])
+    # @dog.update(params[:dog])
+    @dog.update(dog_params)
+    redirect_to dogs_path
+  end
+
+  def destroy
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect_to dogs_path, status: :see_other
+  end
+
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :price)
+    params.require(:dog).permit(:name, :breed, :description, :price, :id)
   end
 
   
