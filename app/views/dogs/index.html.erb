@@ -6,7 +6,11 @@
     <div class="card">
       <div class="card-header">
         <%# <%= image_tag(dog.photo.variant(resize: '300x300'), class: 'dog-photo') if dog.photo.attached? %>
-        <%= cl_image_tag(dog.public_id, width: 400, height: 300, crop: :fill) %>
+        <% if dog.photo.attached? %>
+          <%= cl_image_tag(dog.photo.key, width: 400, height: 300, crop: :fill) %>
+        <% else %>
+          <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
+        <% end %>
         <h2><%= dog.name %></h2>
         <p><%= dog.breed %></p>
         <p><%= dog.price %></p>
