@@ -21,6 +21,8 @@ class DogsController < ApplicationController
     @dog = Dog.find(params[:id])
     @dog.update(params[:dog])
     redirect_to dog_path(@dog)
+  end
+
   def new
     @dog = Dog.new
     @dog.save
@@ -41,4 +43,6 @@ class DogsController < ApplicationController
   def dog_params
     params.require(:dog).permit(:name, :breed, :description, :price)
   end
+
+  
 end
