@@ -1,2 +1,11 @@
-<h2>Your dashboard</h2>
-<button><%= link_to "Add Dog to Listing", new_dog_path %></button>
+<h2 class="text-center py-2">Your dashboard</h2>
+
+<div class= "dogs-listing">
+  <h3 >Your listing</h3>
+  <div class= "dog-detail">
+    <% @dogs.each do |dog| %>
+      <p><%= dog.name %></p>
+    <% end %>
+  </div>
+</div>
+<button class="button"><%= link_to "Add Dog to Listing", new_dog_path %></button>

@@ -6,6 +6,10 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @dogs = Dog.all
   end
-  
+
+  def show
+    @dog = Dog.all
+  end
 end
