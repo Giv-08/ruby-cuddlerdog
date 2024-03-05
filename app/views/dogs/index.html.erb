@@ -1,7 +1,22 @@
-<h1> Cuddle Fluffy Dogs </h1>
+<%# index page coding %>
+<h1> Cuddly Fluffy Dogs </h1>
 
-<ul>
+<div class="card-container">
   <% @dogs.each do |dog| %>
-      <li><%= dog.name %></li>
-    <% end %>
-</ul>
+    <div class="card">
+      <div class="card-header">
+        <h2><%= dog.name %></h2>
+        <p><%= dog.breed %></p>
+        <p><%= dog.price %></p>
+      </div>
+      <div class="card-body">
+        <p><%= dog.description %></p>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
+        <%= link_to 'Edit', edit_dog_path(dog), class: 'btn btn-info' %>
+        <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?", class: 'btn btn-secondary' } %>
+      </div>
+    </div>
+  <% end %>
+</div>
