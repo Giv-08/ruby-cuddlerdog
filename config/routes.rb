@@ -24,9 +24,8 @@ Rails.application.routes.draw do
   # delete '/rentals/:id', to: 'rentals#destroy'
   resources :pages
   resources :dogs do
-    resources :rentals, only: [:new, :create]
+    resources :rentals, only: [:new, :create, :index, :show, :edit, :update]
   end
-  resources :rentals, except: [:new, :create]
   # root to: "pages#home", as: :home
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

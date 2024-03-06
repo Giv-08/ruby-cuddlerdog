@@ -2,6 +2,7 @@ class RentalsController < ApplicationController
   # skip_before_action :authenticate_rental!, only: :home
 
   def show
+    @dog = Dog.find(params[:dog_id])
     @rental = Rental.find(params[:id])
   end
 
@@ -15,14 +16,15 @@ class RentalsController < ApplicationController
   end
 
   def create
-    @rental = Rental.new(**rental_params, dog_id: @dog)
-    # @rental.dog_id = @dog
+    @rental = Rental.new(rental_params)
+    @rental.status = 1
+    @dog = Dog.find(params[:dog_id])
+    @rental.dog = @dog
     @rental.user = current_user
     @rental.start_date = Date.parse(rental_params[:start_date])
     @rental.end_date = Date.parse(rental_params[:end_date])
-    raise
     if @rental.save
-      redirect_to root_path, notice: "rental created successfully"
+      redirect_to dashboard_path, notice: "rental created successfully"
     else
       render :new, status: :unprocessable_entity
     end
@@ -35,18 +37,20 @@ class RentalsController < ApplicationController
   end
 
   def edit
+    @dog = Dog.find(params[:dog_id])
     @rental = Rental.find(params[:id])
   end
 
   def update
     @rental = Rental.find(params[:id])
-    @rental.update(params[:rental])
-    redirect_to rental_path(@rental)
+    @dog = Dog.find(params[:dog_id])
+    @rental.update(rental_params)
+    redirect_to dog_rental_path(@dog, @rental)
   end
 
   private
 
   def rental_params
-    params.require(:rental).permit(:status, :start_date, :end_date)
+    params.require(:rental).permit(:status, :dog_id, :user_id, :start_date, :end_date)
   end
 end
