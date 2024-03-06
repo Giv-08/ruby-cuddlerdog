@@ -1,4 +1,5 @@
-<%= simple_form_for(@rental) do |f| %>
+<h1>Edit rental</h1>
+<%= simple_form_for [@dog, @rental] do |f| %>
   <%= f.input :status %>
   <%= f.submit %>
 <% end %>
