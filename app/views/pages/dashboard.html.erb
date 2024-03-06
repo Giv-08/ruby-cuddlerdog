@@ -1,5 +1,16 @@
 <h2 class="text-center py-2">Your dashboard</h2>
+<div class="container">
+  <h2 class=" py-2">Rental requests:</h2>
+  <% @rentals.each do |rental| %>
+    <% if rental.dog.user == current_user %>
+      <p>There is one rental request for <%= rental.dog.name %><p>
+    <% else %>
+      <p>Your request has been submitted for <%= rental.dog.name %> </p>
+    <% end %>
+  <% end %>
+</div>
 
+<h2 class="text-center py-2">Your dogs are listed for rent: </h2>
 <div class="card-container row">
   <% @dogs.sort_by(&:created_at).reverse.each do |dog| %>
     <div class="card col-sm-6 col-md-3 justify-content-center">
@@ -24,5 +35,4 @@
     </div>
   <% end %>
 </div>
-
 <button class="button my-2"><%= link_to "Add Dog to Listing", new_dog_path %></button>
