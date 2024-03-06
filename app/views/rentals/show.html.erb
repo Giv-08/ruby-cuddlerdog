@@ -1,10 +1,9 @@
 <h1> This is rental <%= @rental.dog.name %></h1>
-<ul>
-<li> Status :<%= @rental.status %></li>
-<li>Start-date :<%= @rental.start_date %></li>
-<li>End-date :<%= @rental.end_date %></li>
-
-</ul>
+  <ul>
+    <li> Status :<%= @rental.status %></li>
+    <li>Start-date :<%= @rental.start_date %></li>
+    <li>End-date :<%= @rental.end_date %></li>
+  </ul>
 
  <div class="btn">
     <span><%= link_to "Edit this rental", edit_dog_rental_path(@dog, @rental), class: "btn btn-primary" %></span>
@@ -13,4 +12,4 @@
   <span><%= link_to "Back to rental lists", dog_rentals_path, class: "btn btn-primary" %></span>
 </div>
 <%= link_to "Delete", dog_rental_path(@rental), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete?"}, class: 'btn btn-secondary' %>
-<%# (:dog_id) %>
+</div>
