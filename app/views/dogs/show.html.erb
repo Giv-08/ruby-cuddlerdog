@@ -21,11 +21,12 @@
     </div>
   </div>
   <div class="footer">
-        <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
-        <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'btn btn-info' %>
+        <%# <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
         <% if current_user && current_user.id == @dog.user.id %>
           <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
           <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
+        <% else %>
+          <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'btn btn-info' %>
         <% end %>
   </div>
 </div>
