@@ -1,13 +1,13 @@
 <%# index page coding %>
 <h1> Cuddly Fluffy Dogs </h1>
 
-<div class="card-container">
-  <% @dogs.each do |dog| %>
-    <div class="card">
+<div class="card-container row">
+  <% @dogs.shuffle.each do |dog| %>
+    <div class="card col-sm-6 col-md-3 justify-content-center">
       <div class="card-header">
         <%# <%= image_tag(dog.photo.variant(resize: '300x300'), class: 'dog-photo') if dog.photo.attached? %>
         <% if dog.photo.attached? %>
-          <%= cl_image_tag(dog.photo.key, width: 400, height: 300, crop: :fill) %>
+          <%= cl_image_tag(dog.photo.key, width: 200, height: 200, crop: :fill) %>
         <% else %>
           <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
         <% end %>
@@ -20,8 +20,6 @@
       </div>
       <div class="card-footer">
         <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
-        <%= link_to 'Edit', edit_dog_path(dog), class: 'btn btn-info' %>
-        <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(dog.name)}?"}, class: 'btn btn-secondary' %>
       </div>
     </div>
   <% end %>

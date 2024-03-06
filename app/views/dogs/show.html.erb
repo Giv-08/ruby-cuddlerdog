@@ -3,7 +3,7 @@
     <h1>Welcome to <%= @dog.name %> page</h1>
     <div>
       <% if @dog.photo.attached? %>
-        <%= cl_image_tag @dog.photo.key, width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag @dog.photo.key, width: 500, height: 500, crop: :fill %>
       <% else %>
         <p><%= @dog.name %> is shy and doesn't have a picture yet🙈</p>
       <% end %>
@@ -22,7 +22,9 @@
   </div>
   <div class="footer">
         <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
-        <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
-        <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
+        <% if current_user && current_user.id == @dog.user.id %>
+          <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
+          <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
+        <% end %>
   </div>
 </div>
