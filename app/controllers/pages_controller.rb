@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @dogs = Dog.all
+    @dogs = Dog.where(user: @user)
   end
 
   def show
