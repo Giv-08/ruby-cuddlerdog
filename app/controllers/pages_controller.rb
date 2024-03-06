@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @dogs = Dog.where(user: @user)
+    @rentals = Rental.all
   end
 
   def show

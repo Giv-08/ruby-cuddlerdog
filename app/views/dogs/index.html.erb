@@ -2,10 +2,10 @@
 <h1> Cuddly Fluffy Dogs </h1>
 
 <div class="card-container row">
+  <%# for each dog, shuffle the display of cards each time page is refreshed %>
   <% @dogs.shuffle.each do |dog| %>
     <div class="card col-sm-6 col-md-3 justify-content-center">
       <div class="card-header">
-        <%# <%= image_tag(dog.photo.variant(resize: '300x300'), class: 'dog-photo') if dog.photo.attached? %>
         <% if dog.photo.attached? %>
           <%= cl_image_tag(dog.photo.key, width: 200, height: 200, crop: :fill) %>
         <% else %>
