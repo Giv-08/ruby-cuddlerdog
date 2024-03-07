@@ -1,9 +1,6 @@
 class DogsController < ApplicationController
-  # def index
-  #   @dogs = Dog.all
-  # end
+  skip_before_action :authenticate_user!, only: :index
 
-  # index with filtering applied to list of dog.all
   def index
     @dogs = Dog.all
     if params[:breed].present?
