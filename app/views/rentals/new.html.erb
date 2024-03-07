@@ -1,7 +1,9 @@
-<div class="form-wrap ms-4 mt-3">
+<div class="d-flex justify-content-center">
+<div class="form-wrap border border-warning m-5" style="width: 35rem;">
 <br>
 <h1 class="text-center">Rental a dog</h1>
 <br>
+<div class="form m-5 ml-5">
 <%= simple_form_for [@dog, @rental] do |f| %>
 <%= f.input :start_date,
             as: :string,
@@ -12,9 +14,11 @@
   <%= f.submit %>
 <% end %>
 </div>
+</div>
+</div>
 <%# button %>
 <div class="button-container">
-  <div class="btn">
-  <span><%= link_to "Back to rental lists", dog_rentals_path, class: "btn btn-primary" %></span>
+  <div class="btn d-flex justify-content-center">
+  <span ><%= link_to "Back to rental lists", dog_rentals_path, class: "button" %></span>
     </div>
 </div>
