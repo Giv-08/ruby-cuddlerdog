@@ -11,12 +11,14 @@
   </head>
 
   <body>
-  <%= render "shared/navbar" %>
-  <%= render "shared/flashes" %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-  <%# Footer part of this page %>
+    <%# Footer part of this page %>
     <footer>
       <p> © 2024 Cuddler Dog. Proudly created by Le Wagon B.1497 2024 </p>
       <p> For all your cuddle needs </p>
