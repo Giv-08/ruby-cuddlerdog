@@ -1,2 +1,54 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// CARDS OF DOGS SECTION
+.cards-title {
+  text-align: center;
+  background-color: #f5dac3;
+  height: 65px;
+  padding-top: 10px;
+}
+
+.card-container-dog {
+  background-size: cover;
+  background-position: center;
+  .card {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-img-top img {
+    width: 100%;
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    background-color: rgba(212, 212, 212, 0.5);
+    padding-left: 8px;
+    padding-top: 4px;
+  }
+  .dog-details {
+    text-transform: capitalize;
+  }
+  .card-body {
+    padding: 9px;
+  }
+}
+
+// THANK YOU SECTION
+.search-bar {
+  padding: 20px;
+}
+
+.thank-you {
+  background-color: #eab688;
+  padding: 50px;
+}
+
+.Thankyou-container {
+  background-color: #faf8f5;
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 30px;
+}

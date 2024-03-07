@@ -1,10 +1,11 @@
-<div class="title-dogname">
-    <h1>Welcome to <%= @dog.name %> page</h1>
-    <div>
+<div class="show-page">
+  <div class="dog-title-photo">
+    <h1 class="show-dog-title">Welcome to <%= @dog.name %> Page</h1>
+    <div class="dog-img">
       <% if @dog.photo.attached? %>
         <%= cl_image_tag @dog.photo.key, width: 500, height: 500, crop: :fill %>
       <% else %>
-        <p><%= @dog.name %> is shy and doesn't have a picture yet🙈</p>
+        <p><%= @dog.name %> is shy and doesn't have a picture yet 🙈</p>
       <% end %>
     </div>
   </div>
@@ -20,12 +21,12 @@
     </div>
   </div>
   <div class="footer">
-        <%# <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
-        <% if current_user && current_user.id == @dog.user.id %>
-          <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
-          <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
-        <% else %>
-          <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'btn btn-info' %>
-        <% end %>
+    <%# <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
+    <% if current_user && current_user.id == @dog.user.id %>
+      <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
+      <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
+    <% else %>
+      <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'btn btn-info' %>
+    <% end %>
   </div>
 </div>
