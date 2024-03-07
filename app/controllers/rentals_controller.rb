@@ -17,7 +17,7 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-    @rental.status = 1
+    @rental.status = "pending"
     @dog = Dog.find(params[:dog_id])
     @rental.dog = @dog
     @rental.user = current_user
