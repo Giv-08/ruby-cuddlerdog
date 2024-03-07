@@ -56,7 +56,7 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :price, :id, :photo)
+    params.require(:dog).permit(:users_username, :name, :breed, :description, :price, :id, :photo)
   end
 
 end

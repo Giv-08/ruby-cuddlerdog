@@ -1,70 +1,116 @@
-<%# index page coding %>
-
-<div class="dog-index-banner" style="position: relative;">
-  <img src="https://images.unsplash.com/photo-1680718349498-17ff857c7971?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-cover" alt="index header dogs image" width="100%" height="400">
-  <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center" style="position: absolute; top: 0; right: 50%; transform: translateX(50%);">
-    <h1 class="car-img-overlay text-center" style="text-align:center; font-size:57px; letter-spacing:0.03em">Cuddler Dogs</h1>
+  <%# index page coding %>
+<div class="index-midbody">
+  <%# Banner design: image with text overlay -Deb %>
+  <div class="dog-index-banner" style="position: relative;">
+    <img src="https://images.unsplash.com/photo-1680718349498-17ff857c7971?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-cover" alt="index header dogs image" width="100%" height="400">
+    <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center" style="position: absolute; top: 0; right: 50%; transform: translateX(50%);">
+      <h1 class="car-img-overlay text-center" style="text-align:center; font-size:57px; letter-spacing:0.03em">Cuddler Dogs</h1>
+    </div>
   </div>
-  <%# <h1> Cuddly Fluffy Dogs </h1> %>
-</div>
-<br>
-<%# search bar - breed, price min and max %>
-<div class="card-container row">
-  <div class="card col-sm-12 justify-content-center">
-    <%= form_tag dogs_path, method: :get, class: "row g-3" do %>
-      <div class="col-md-4">
-        <div class="form-group">
-          <%= label_tag :breed, "Breed" %>
-          <%= text_field_tag :breed, params[:breed], class: "form-control" %>
-        </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="form-group">
-            <%= label_tag :min_price, "Minimum Price" %>
-            <%= number_field_tag :min_price, params[:min_price], class: "form-control" %>
-        </div>
-      </div>
+  <%# BANNER OVERLAY - GIV%>
+  <%# <header>
+    <div class="overlay">
+      <h1>Cuddler Dogs</h1>
+      <p>Capturing Moments. A Journey of Discovery with Your Fur Friend</p>
+    </div>
+  </header> %>
 
-      <div class="col-md-4">
-        <div class="form-group">
-            <%= label_tag :max_price, "Maximum Price" %>
-            <%= number_field_tag :max_price, params[:max_price], class: "form-control" %>
-        </div>
-      </div>
+  <%# search bar - breed, price min and max %>
+  <div class="search-bar">
+    <div class="container mx-auto">
+      <div class="textbox row justify-content-center">
+        <%= form_tag dogs_path, method: :get, class: "row g-3" do %>
+          <div class="col-md-3">
+            <div class="form-group">
+              <%= label_tag :breed, "Breed" %>
+              <%= text_field_tag :breed, params[:breed], class: "form-control" %>
+            </div>
+          </div>
 
-      <div class="form-group">
-        <%= button_tag "Filter", type: :submit, class: "btn btn-info" %>
-        <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "btn btn-info" %>
-      </div>
-    <% end %>
-  </div>
-</div>
-<br>
+          <div class="col-md-3">
+            <div class="form-group">
+                <%= label_tag :min_price, "Minimum Price" %>
+                <%= number_field_tag :min_price, params[:min_price], class: "form-control" %>
+            </div>
+          </div>
 
-<h1> Cuddly Fluffy Dogs </h1>
+          <div class="col-md-3">
+            <div class="form-group">
+                <%= label_tag :max_price, "Maximum Price" %>
+                <%= number_field_tag :max_price, params[:max_price], class: "form-control" %>
+            </div>
+          </div>
 
-
-<div class="card-container row">
-  <%# for each dog, shuffle the display of cards each time page is refreshed %>
-  <% @dogs.shuffle.each do |dog| %>
-    <div class="card col-sm-6 col-md-3 justify-content-center">
-      <div class="card-header">
-        <% if dog.photo.attached? %>
-          <%= cl_image_tag(dog.photo.key, width: 200, height: 200, crop: :fill) %>
-        <% else %>
-          <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
+          <div class="col-md-3">
+            <div class="form-group">
+            <%# &nbsp is a special character (html): its space  that will keep things in line without breaking %>
+            <label class="d-block">&nbsp;</label>
+              <%= button_tag "Filter", type: :submit, class: "btn btn-info" %>
+              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "btn btn-info" %>
+            </div>
+          </div>
         <% end %>
-        <h2><%= dog.name %></h2>
-        <p><%= dog.breed %></p>
-        <p>$<%= dog.price %></p>
-      </div>
-      <div class="card-body">
-        <p><%= dog.description %></p>
-      </div>
-      <div class="card-footer">
-        <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
       </div>
     </div>
-  <% end %>
+  </div>
+
+  <%# CARDS of dogs %>
+  <h1 class="cards-title"> Cuddly Fluffy Dogs </h1>
+  <div class="container mx-auto card-container-dog row">
+    <%# for each dog, shuffle the display of cards each time page is refreshed %>
+      <% @dogs.shuffle.each do |dog| %>
+        <div class="col-sm-6 col-md-3 justify-content-center">
+          <div class="card">
+            <%# contains img of dog and owner username %>
+            <div class="card-img-top">
+              <% if dog.photo.attached? %>
+                <%= cl_image_tag(dog.photo.key, width:200, height:200, class: "object-fit-cover", crop: :fill) %>
+              <% else %>
+                <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
+              <% end %>
+            </div>
+            <%# adding users user-name to dog card %>
+            <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center">
+                <h3 class="car-img-overlay text-center" style="text-align:center; font-size:17px; letter-spacing:0.03em; color: #3B3B3A"><i class="fa-regular fa-user"></i><%= dog.users_username %></h3>
+              </div>
+            <%# dog info section & price %>
+            <div class="card-body">
+              <div class="dog-details">
+                <h2 class="card-title"><%= dog.name %></h2>
+                <p><%= dog.breed %></p>
+              </div>
+              <p>$<%= dog.price %></p>
+              <%# dog description box %>
+              <p class="card-dog-description" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: calc(95% - 10px);">
+                <%= dog.description %>
+              </p>
+            </div>
+
+            <%# button to view dog %>
+            <div class="card-footer">
+              <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+
+  <%# Thank you section %>
+  <div class="thank-you">
+    <div class="Thankyou-container">
+      <div class="d-flex justify-content-center align-items-center">
+          <svg viewBox="0 0 500 200" style="width: 100%; position: absolute; top: 0;">
+          <path id="curve" fill="transparent" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+            <text width="500">
+              <textPath xlink:href="#curve">
+                🐾 Thank you for entrusting Cuddler Dog services 🐾
+              </textPath>
+            </text>
+          </svg>
+          <img src="https://images.unsplash.com/photo-1554830072-52d78d0d4c18?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-cover" alt="thanks img" width="380" height="380">
+      </div>
+    </div>
+  </div>
+
 </div>
