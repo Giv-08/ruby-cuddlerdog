@@ -8,11 +8,15 @@
     <% @rentals.each do |rental| %>
       <div class="border p-2">
         <% if rental.dog.user == current_user %>
+        <% if rental.status == "pending" %>
           <p>There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
             <div class="button-container">
               <%= link_to "Approve", rental_path(rental, rental: {status: :approved}), data: {turbo_method: :patch}, class: "button-positive"%>
               <%= link_to "decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch}, class: "button" %></button>
             </div>
+          <% else %>
+          <div>Your request has been: <%= rental.status   %></div>
+        <% end %>
         <% else%>
           <p>Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
         <% end %>
