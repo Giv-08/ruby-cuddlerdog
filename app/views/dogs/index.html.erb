@@ -1,5 +1,45 @@
 <%# index page coding %>
-<h1> Cuddly Fluffy Dogs </h1>
+<div class="dog-index-banner" style="position: relative;">
+  <img src="https://images.unsplash.com/photo-1680718349498-17ff857c7971?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-fit-cover" alt="index header dogs image" width="100%" height="400">
+  <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center" style="position: absolute; top: 0; right: 50%; transform: translateX(50%);">
+    <h1 class="car-img-overlay text-center" style="text-align:center; font-size:57px; letter-spacing:0.03em">Cuddler Dogs</h1>
+  </div>
+  <%# <h1> Cuddly Fluffy Dogs </h1> %>
+</div>
+<br>
+<%# search bar - breed, price min and max %>
+<div class="card-container row">
+  <div class="card col-sm-12 justify-content-center">
+    <%= form_tag dogs_path, method: :get, class: "row g-3" do %>
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= label_tag :breed, "Breed" %>
+          <%= text_field_tag :breed, params[:breed], class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+            <%= label_tag :min_price, "Minimum Price" %>
+            <%= number_field_tag :min_price, params[:min_price], class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+            <%= label_tag :max_price, "Maximum Price" %>
+            <%= number_field_tag :max_price, params[:max_price], class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= button_tag "Filter", type: :submit, class: "btn btn-info" %>
+        <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "btn btn-info" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
 
 <div class="card-container row">
   <%# for each dog, shuffle the display of cards each time page is refreshed %>
@@ -13,7 +53,7 @@
         <% end %>
         <h2><%= dog.name %></h2>
         <p><%= dog.breed %></p>
-        <p><%= dog.price %></p>
+        <p>$<%= dog.price %></p>
       </div>
       <div class="card-body">
         <p><%= dog.description %></p>
