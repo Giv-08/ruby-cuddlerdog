@@ -2,48 +2,55 @@
   <h2 class="text-center py-2">Your dashboard</h2>
 </div>
 
-<div class="dashboard-rental-request-container">
-  <h2 class=" py-2">Rental requests:</h2>
-  <% @rentals.each do |rental| %>
-    <div class="border p-2">
-      <% if rental.dog.user == current_user %>
-        <p>There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)<p>
-          <button><%= link_to "Approve", rental_path(rental, rental: {status: :approved}), data: {turbo_method: :patch} %></button>
-          <button><%= link_to "decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch} %></button>
-      <% else%>
-        <p>Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
-      <% end %>
-    </div>
-  <% end %>
-</div>
-
-<div class="dashboard-dog-rent-list">
-  <div class="db-rentdog-header">
-    <h2 class="text-center py-2">Your dogs are listed for rent: </h2>
-  </div>
-  <div class="card-container row">
-    <% @dogs.sort_by(&:created_at).reverse.each do |dog| %>
-      <div class="card col-sm-6 col-md-3 justify-content-center">
-        <div class="card-header">
-          <h2><%= dog.name %></h2>
-        </div>
-        <div class="card-body">
-          <% if dog.photo.attached? %>
-            <%= cl_image_tag(dog.photo.key, width: 200, height: 200, crop: :fill) %>
+<div class="container">
+  <div class="dashboard-rental-request-container">
+    <h2 class=" py-2">Rental requests:</h2>
+    <% @rentals.each do |rental| %>
+      <div class="border p-2">
+        <% if rental.dog.user == current_user %>
+        <% if rental.status == "pending" %>
+          <p>There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
+            <div class="button-container">
+              <%= link_to "Approve", rental_path(rental, rental: {status: :approved}), data: {turbo_method: :patch}, class: "button-positive"%>
+              <%= link_to "decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch}, class: "button" %></button>
+            </div>
           <% else %>
-            <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
-          <% end %>
-          <p>Breed : <%= dog.breed %></p>
-          <p>Price : <%= dog.price %></p>
-          <p>Description : <%= dog.description %></p>
-        </div>
-        <div class="card-footer">
-          <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
-          <%= link_to 'Edit', edit_dog_path(dog), class: 'btn btn-info' %>
-          <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(dog.name)}?"}, class: 'btn btn-secondary' %>
-        </div>
+          <div>Your request has been: <%= rental.status   %></div>
+        <% end %>
+        <% else%>
+          <p>Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
+        <% end %>
       </div>
     <% end %>
   </div>
-  <button class="add-dog"><%= link_to "Add Dog to Listing", new_dog_path, class: 'btn btn-info' %></button>
+
+
+  <div class="dashboard-dog-rent-list">
+    <div class="db-rentdog-header">
+      <h2 class="text-center py-2">Your dogs are listed for rent: </h2>
+    </div>
+    <div class="card-container row ">
+      <% @dogs.sort_by(&:created_at).reverse.each do |dog| %>
+        <div class="card col-sm-6 col-md-3 justify-content-center dogs-card">
+          <div class="card-body">
+            <h2><%= dog.name %></h2>
+            <% if dog.photo.attached? %>
+              <%= cl_image_tag(dog.photo.key, width: 200, height: 200, crop: :fill) %>
+            <% else %>
+              <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
+            <% end %>
+            <p>Breed : <%= dog.breed %></p>
+            <p>Price : <%= dog.price %></p>
+            <p>Description : <%= dog.description %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'View', dog_path(dog), class: 'button-positive' %>
+            <%= link_to 'Edit', edit_dog_path(dog), class: 'button-positive' %>
+            <%= link_to "Delete", dog_path(dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(dog.name)}?"}, class: 'button-negative' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "Add Dog to Listing", new_dog_path, class: "button-positive my-3" %>
+</div>
 </div>

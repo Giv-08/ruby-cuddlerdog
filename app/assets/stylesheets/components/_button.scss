@@ -1,0 +1,48 @@
+// this button is for dashboard button which will accept the request pending
+
+.button-positive{
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #F88151;
+  font-weight: 500;
+  background: transparent;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 80ms linear;
+  color: #F88151;
+
+  :hover {
+    background: transparent;
+    color: solid #33170c;
+    text-decoration: none;
+    text-shadow: 2px 3px 3px rgb(183, 183, 183);
+  }
+}
+.button-negative{
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #8D8C8A;
+  font-weight: 500;
+  background: transparent;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 80ms linear;
+  color: #8D8C8A;
+}
+.dogs-card{
+  border: #33170c;
+  background-color: #F8FBE4;
+  border-radius: 8px;
+
+}
+.card-footer{
+  background-color:  #F8FBE4;
+}
