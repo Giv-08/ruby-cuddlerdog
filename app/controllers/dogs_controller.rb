@@ -29,7 +29,7 @@ class DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
     @dog.update(dog_params)
-    redirect_to dogs_path
+    redirect_to dashboard_path
   end
 
   def destroy
