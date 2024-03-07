@@ -40,12 +40,11 @@ class RentalsController < ApplicationController
     @dog = Dog.find(params[:dog_id])
     @rental = Rental.find(params[:id])
   end
-
+  # patch /rentals/:id
   def update
     @rental = Rental.find(params[:id])
-    @dog = Dog.find(params[:dog_id])
     @rental.update(rental_params)
-    redirect_to dog_rental_path(@dog, @rental)
+    redirect_to dashboard_path
   end
 
   private

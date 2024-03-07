@@ -2,11 +2,15 @@
 <div class="container">
   <h2 class=" py-2">Rental requests:</h2>
   <% @rentals.each do |rental| %>
-    <% if rental.dog.user == current_user %>
-      <p>There is one rental request for <%= rental.dog.name %><p>
-    <% else %>
-      <p>Your request has been submitted for <%= rental.dog.name %> </p>
-    <% end %>
+    <div class="border p-2">
+      <% if rental.dog.user == current_user %>
+        <p>There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)<p>
+          <button><%= link_to "Approve", rental_path(rental, rental: {status: :approved}), data: {turbo_method: :patch} %></button>
+          <button><%= link_to "decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch} %></button>
+      <% else%>
+        <p>Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
+      <% end %>
+    </div>
   <% end %>
 </div>
 

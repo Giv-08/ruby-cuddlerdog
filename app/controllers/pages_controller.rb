@@ -7,7 +7,8 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @dogs = Dog.where(user: @user)
-    @rentals = Rental.all
+    # all rentals for my dogs && all rentals where I am the user
+    @rentals = Rental.where(user: current_user).or(Rental.where(dog: current_user.dogs)).order(created_at: :desc)
   end
 
   def show
