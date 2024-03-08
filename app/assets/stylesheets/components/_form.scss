@@ -6,3 +6,35 @@
 .form-control {
   color: #F88151;
 }
+
+input {
+  color:#F88151;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #F88151;
+}
+
+label.form-label.string.optional {
+  color: #F88151;
+}
+
+// dog-list form
+h2.dashboard-heading {
+  color: #F88151;
+}
+
+label.form-label.string.required {
+  color: #F88151;
+}
+
+label.form-label.integer.optional {
+  color: #F88151;
+}
+
+label.form-label.file.optional {
+  color: #F88151;
+}
+
+input#dog_photo.form-control.file.optional {
+  color: #F88151;
+}
