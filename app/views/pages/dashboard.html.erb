@@ -30,7 +30,7 @@
     </div>
     <div class="card-container row ">
       <% @dogs.sort_by(&:created_at).reverse.each do |dog| %>
-        <div class="card col-sm-6 col-md-3 justify-content-center dogs-card">
+        <div class="card col-sm-6 col-md-3 justify-content-center dogs-card dogs-main-card">
           <div class="card-body">
             <h2 class="dashboard-heading dog-name"><%= dog.name %></h2>
             <% if dog.photo.attached? %>
