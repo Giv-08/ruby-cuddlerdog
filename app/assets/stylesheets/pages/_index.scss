@@ -4,7 +4,7 @@
 // CARDS OF DOGS SECTION
 .cards-title {
   text-align: center;
-  background-color: #f5dac3;
+  color: #f88151;
   height: 65px;
   padding-top: 10px;
 }
@@ -12,6 +12,7 @@
 .card-container-dog {
   background-size: cover;
   background-position: center;
+  padding-top: 25px;
   .card {
     margin-bottom: 24px;
     border-radius: 8px;
@@ -33,6 +34,17 @@
   }
   .card-body {
     padding: 9px;
+  }
+  .dog-short-info {
+    margin-bottom: 2px;
+  }
+  .card-dog-description {
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(95% - 10px);
+    text-transform: capitalize;
   }
 }
 
