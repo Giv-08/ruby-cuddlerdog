@@ -1,0 +1,36 @@
+// < BANNER OVERLAY >
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{height: 900px;}
+header {
+	background-image: url(https://nypost.com/wp-content/uploads/sites/2/2018/07/180723-women-prefer-hanging-with-dogs-than-lover-feature.jpg?quality=75&strip=all);
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay {
+  width: 100%;
+  height: 40vh;
+  padding: 50px;
+  color: #fffdeddc;
+  text-shadow: 1px 1px 2px #ffc000;
+  background-image: linear-gradient(135deg, #d2a96b00 10%, #ffc10724 100%);
+}
+
+.overlay p {
+  color: #fffbe0c8;
+  font-size: 24px;
+}
+
+div.overlay {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  flex-direction: column;
+}

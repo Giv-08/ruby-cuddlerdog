@@ -1,7 +1,9 @@
 .avatar {
+  left: 15px;
   width: 40px;
   border-radius: 50%;
-  background-color: rgba(172, 255, 47, 0.418);
+  position: relative;
+
 }
 .avatar-large {
   width: 56px;
