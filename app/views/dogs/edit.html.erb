@@ -1,10 +1,17 @@
-<h1>Edit Dog information</h1>
+<div class="d-flex justify-content-center">
+  <div class="form-wrap border border-warning m-5" style="width: 35rem;">
+  <br>
+  <h2 class="text-center dashboard-heading">Edit Dog information</h2>
 
-<%= simple_form_for(@dog) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :breed %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.file_field :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+  <div class="form m-5 ml-5">
+    <%= simple_form_for(@dog) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :breed %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.file_field :photo, as: :file %>
+      <%= f.submit class:"button-positive" %>
+    <% end %>
+  </div>
+</div>
+</div>
