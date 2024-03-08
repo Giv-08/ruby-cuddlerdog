@@ -46,8 +46,8 @@
             <div class="form-group">
             <%# &nbsp is a special character (html): its space  that will keep things in line without breaking %>
             <label class="d-block">&nbsp;</label>
-              <%= button_tag "Filter", type: :submit, class: "btn btn-info" %>
-              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "btn btn-info" %>
+              <%= button_tag "Filter", type: :submit, class: "button-positive" %>
+              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "button-positive" %>
             </div>
           </div>
         <% end %>
@@ -65,7 +65,7 @@
             <%# contains img of dog and owner username %>
             <div class="card-img-top">
               <% if dog.photo.attached? %>
-                <%= cl_image_tag(dog.photo.key, width:200, height:200, class: "object-fit-cover", crop: :fill) %>
+                <%= cl_image_tag(dog.photo.key, width:200, height:200, class: "object-fit-cover", crop: :fill, gracity: :face) %>
               <% else %>
                 <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
               <% end %>
@@ -78,18 +78,18 @@
             <div class="card-body">
               <div class="dog-details">
                 <h2 class="card-title"><%= dog.name %></h2>
-                <p><%= dog.breed %></p>
+                <p class="dog-short-info"><%= dog.breed %></p>
               </div>
-              <p>$<%= dog.price %></p>
+              <p class="dog-short-info">$<%= dog.price %></p>
               <%# dog description box %>
-              <p class="card-dog-description" style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: calc(95% - 10px);">
+              <p class="card-dog-description">
                 <%= dog.description %>
               </p>
             </div>
 
             <%# button to view dog %>
             <div class="card-footer">
-              <%= link_to 'View', dog_path(dog), class: 'btn btn-info' %>
+              <%= link_to 'View', dog_path(dog), class: 'button-positive' %>
             </div>
           </div>
         </div>

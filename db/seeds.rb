@@ -17,19 +17,20 @@ require 'json'
 User.destroy_all
 Dog.destroy_all
 
-5.times do
+7.times do
   users = User.new(
     email: Faker::Internet.email,
     password: Faker::Internet.password(min_length: 6, max_length: 10)
   )
   users.save!
 end
-5.times do
+7.times do
   breed = Faker::Creature::Dog.breed
   file = URI.open("http://dog.ceo/api/breeds/image/random/#{breed.parameterize}").read
   image = JSON.parse(file)
   dog = Dog.new(
     breed: breed.first,
+    users_username: Faker::Internet.username(specifier: 5..10),
     name: Faker::Creature::Dog.name,
     description: Faker::Lorem.paragraph(sentence_count: 3),
     price: Faker::Commerce.price,
