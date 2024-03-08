@@ -3,7 +3,7 @@
     <h1 class="show-dog-title">Welcome to <%= @dog.name %> Page</h1>
     <div class="dog-img">
       <% if @dog.photo.attached? %>
-        <%= cl_image_tag @dog.photo.key, width: 500, height: 500, crop: :fill %>
+        <%= cl_image_tag @dog.photo.key, width: 500, height: 500, crop: :fill, gravity: :face %>
       <% else %>
         <p><%= @dog.name %> is shy and doesn't have a picture yet 🙈</p>
       <% end %>
