@@ -24,21 +24,21 @@
           <div class="col-md-3">
             <div class="form-group">
               <%= label_tag :breed, "Breed" %>
-              <%= text_field_tag :breed, params[:breed], class: "form-control" %>
+              <%= text_field_tag :breed, params[:breed], class: "form-control border border-secondary-subtle" %>
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 ">
             <div class="form-group">
                 <%= label_tag :min_price, "Minimum Price" %>
-                <%= number_field_tag :min_price, params[:min_price], class: "form-control" %>
+                <%= number_field_tag :min_price, params[:min_price], class: "form-control border border-secondary-subtle" %>
             </div>
           </div>
 
           <div class="col-md-3">
             <div class="form-group">
                 <%= label_tag :max_price, "Maximum Price" %>
-                <%= number_field_tag :max_price, params[:max_price], class: "form-control" %>
+                <%= number_field_tag :max_price, params[:max_price], class: "form-control border border-secondary-subtle" %>
             </div>
           </div>
 
@@ -47,7 +47,7 @@
             <%# &nbsp is a special character (html): its space  that will keep things in line without breaking %>
             <label class="d-block">&nbsp;</label>
               <%= button_tag "Filter", type: :submit, class: "button-positive" %>
-              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "button-positive" %>
+              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "button-negative" %>
             </div>
           </div>
         <% end %>
@@ -61,7 +61,7 @@
     <%# for each dog, shuffle the display of cards each time page is refreshed %>
       <% @dogs.shuffle.each do |dog| %>
         <div class="col-sm-6 col-md-3 justify-content-center">
-          <div class="card">
+          <div class="card dogs-main-card">
             <%# contains img of dog and owner username %>
             <div class="card-img-top">
               <% if dog.photo.attached? %>
@@ -71,24 +71,24 @@
               <% end %>
             </div>
             <%# adding users user-name to dog card %>
-            <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center">
-                <h3 class="car-img-overlay text-center" style="text-align:center; font-size:17px; letter-spacing:0.03em; color: #3B3B3A"><i class="fa-regular fa-user"></i><%= dog.users_username %></h3>
+            <div class="mask text-light d-flex justify-content-center align-items-center flex-column text-center rounded px-2">
+                <h3 class="car-img-overlay text-center fst-italic text-secondary-emphasis" style="text-align:center; font-size:12px; letter-spacing:0.03em; color: #3B3B3A"><i class="fa-regular fa-user"></i><%= dog.users_username %></h3>
               </div>
             <%# dog info section & price %>
             <div class="card-body">
               <div class="dog-details">
-                <h2 class="card-title"><%= dog.name %></h2>
-                <p class="dog-short-info"><%= dog.breed %></p>
+                <h2 class="card-title dog-name"><%= dog.name %></h2>
+                <p class="dog-short-info">Breed: <%= dog.breed %></p>
               </div>
-              <p class="dog-short-info">$<%= dog.price %></p>
+              <p class="dog-short-info">Price: $<%= dog.price %></p>
               <%# dog description box %>
               <p class="card-dog-description">
-                <%= dog.description %>
+                Description: <%= dog.description %>
               </p>
             </div>
 
             <%# button to view dog %>
-            <div class="card-footer">
+            <div class="card-footer text-center">
               <%= link_to 'View', dog_path(dog), class: 'button-positive' %>
             </div>
           </div>

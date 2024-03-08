@@ -8,7 +8,7 @@
   border: 1px solid #F88151;
   font-weight: 500;
   background: transparent;
-  padding: 8px;
+  padding: 8px 12px;
   font-size: 15px;
   border-radius: 4px;
   height: 36px;
@@ -68,7 +68,16 @@
   font-size: 24px;
   color: #000000;
 
-  .dog-name{
-    color: #8D8C8A;
-  }
+}
+.dog-name{
+  color: #F88151;
+  font-size: 24px;
+}
+
+.dogs-main-card:hover{
+  border:solid #F88151 ;
+  border-bottom-width: 3px;
+  border-top-width: 1px;
+  transition-duration: 2s;
+  transition: all 0.5s ease-in-out;
 }
