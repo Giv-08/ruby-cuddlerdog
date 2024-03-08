@@ -3,9 +3,9 @@
 // Welcome title with dog name
 .show-dog-title {
   text-align: center;
-  background-color: #f5dac3;
+  color: #f88151;
   height: 80px;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 .dog-img img {
   display: block;
@@ -13,4 +13,19 @@
   margin-right: auto;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.body-footer {
+  padding: 50px 10px 30px 10px;
+}
+
+.body {
+  margin-left: 50px;
+  .show-dog-description {
+    text-transform: capitalize;
+  }
+}
+
+.footer-dogshowpage {
+  margin-left: 50px;
 }
