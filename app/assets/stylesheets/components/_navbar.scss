@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FDECDC;
+  background: #F8FBE4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,9 +8,29 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 110px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  transition: 200ms ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #8D8C8A;
+  &:hover {
+    color: #585858;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+    background-color: #eff9a8db;
+    border-radius: 5px;
+  }
+}
+ul.nav.navbar-nav.d-flex.justify-content-between.w-70{
+  gap: 150px;
 }
 
+ #navbarSupportedContent {
+    position: relative;
+    right: 56px;
+ }
 // < BANNER OVERLAY >
 // *{padding: 0; margin: 0; box-sizing: border-box;}
 // body{height: 900px;}

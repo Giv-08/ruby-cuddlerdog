@@ -1,23 +1,24 @@
 <div class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "dogLogo.png" %>
+    <%# logo-left  %>
+      <div class="logo"><%= image_tag "logo_dog.png" %></div>
     <% end %>
 
     <%# Adding elements to nav-bar without links %>
     <div class="navbar elements">
       <ul class="nav navbar-nav d-flex justify-content-between w-70">
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">About</a>
+          <a class="nav-link" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Press</a>
+          <a class="nav-link" href="#">Press</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Q & A</a>
+          <a class="nav-link" href="#">Q & A</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="#">Contact</a>
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
     </div>

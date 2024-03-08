@@ -30,6 +30,7 @@ end
   image = JSON.parse(file)
   dog = Dog.new(
     breed: breed.first,
+    users_username: Faker::Internet.username(specifier: 5..10),
     name: Faker::Creature::Dog.name,
     description: Faker::Lorem.paragraph(sentence_count: 3),
     price: Faker::Commerce.price,
