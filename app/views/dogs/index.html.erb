@@ -10,6 +10,9 @@
   </header>
 
   <%# search bar - breed, price min and max %>
+  <div class="search-box">
+    <h1 id="search">SEARCH</h1>
+  </div>
   <div class="search-bar">
     <div class="container mx-auto">
       <div class="textbox row justify-content-center">
@@ -38,9 +41,11 @@
           <div class="col-md-3">
             <div class="form-group">
             <%# &nbsp is a special character (html): its space  that will keep things in line without breaking %>
-            <label class="d-block">&nbsp;</label>
-              <%= button_tag "Filter", type: :submit, class: "button-positive" %>
-              <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "button-negative" %>
+            <%# <label class="d-block">&nbsp;</label> %>
+              <div class="box-buttons">
+                <%= button_tag "Filter", type: :submit, class: "button-positive" %>
+                <%= button_tag "Reset", type: :button, onclick: "window.location.href = '#{dogs_path}'", class: "button-negative" %>
+              </div>
             </div>
           </div>
         <% end %>

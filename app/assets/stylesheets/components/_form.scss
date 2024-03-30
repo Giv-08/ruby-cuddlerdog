@@ -1,3 +1,7 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
 // rental form
 .form-wrap {
   border-radius: 10px;
@@ -12,6 +16,10 @@ input {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #F88151;
+}
+
+label {
+  color: $eggplant;
 }
 
 label.form-label.string.optional {
@@ -37,4 +45,8 @@ label.form-label.file.optional {
 
 input#dog_photo.form-control.file.optional {
   color: #F88151;
+}
+
+.form-group input {
+  border-radius: .5rem;
 }

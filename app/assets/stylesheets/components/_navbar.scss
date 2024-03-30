@@ -20,6 +20,7 @@ $eggplant: #874D62;
   top: 20px;
   transition: 200ms ease-in-out;
 }
+
 .navbar-light .navbar-nav .nav-link {
   color: $yellow;
   &:hover {
@@ -29,20 +30,26 @@ $eggplant: #874D62;
     border-radius: 5px;
   }
 }
+
 ul.nav.navbar-nav.d-flex.justify-content-between.w-70{
   gap: 150px;
 }
 
- #navbarSupportedContent {
-    position: relative;
-    right: 56px;
- }
+#navbarSupportedContent {
+  position: relative;
+  right: 56px;
+}
 
- div.dropdown-menu.dropdown-menu-end {
-    left: -52px;
-    background: #F8FBE4;
-    border-radius: 6px;
-    border: 2px solid white;
+ul.nav.navbar-nav {
+  position: relative;
+  gap: 8rem;
+}
+
+div.dropdown-menu.dropdown-menu-end {
+  left: -52px;
+  background: #F8FBE4;
+  border-radius: 6px;
+  border: 2px solid white;
     a {
       color: #8D8C8A;
       text-align: center;

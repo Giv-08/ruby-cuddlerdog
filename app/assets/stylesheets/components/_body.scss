@@ -6,3 +6,22 @@ $eggplant: #874D62;
 body {
   background:$blue;
 }
+
+div.container.mx-auto {
+  display: flex;
+  justify-content: center;
+}
+
+div.textbox.row.justify-content-center {
+  background-color: #ffffff63;
+  width: 100%;
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+
+h1#search {
+  margin: 3rem 0 0;
+  display: flex;
+  justify-content: center;
+  color: $yellow;
+}

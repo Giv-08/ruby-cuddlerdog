@@ -6,7 +6,7 @@ $eggplant: #874D62;
 // CARDS OF DOGS SECTION
 .cards-title {
   text-align: center;
-  color: #f88151;
+  color: $eggplant;
   height: 65px;
   padding-top: 10px;
 }
@@ -39,6 +39,7 @@ $eggplant: #874D62;
   }
   .dog-short-info {
     margin-bottom: 2px;
+    color: $yellow;
   }
   .card-dog-description {
     margin-bottom: 5px;
