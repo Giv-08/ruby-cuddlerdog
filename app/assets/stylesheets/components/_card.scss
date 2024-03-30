@@ -1,0 +1,68 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
+
+// CARDS OF DOGS SECTION
+.cards-title {
+  text-align: center;
+  color: #f88151;
+  height: 65px;
+  padding-top: 10px;
+}
+
+.card-container-dog {
+  background-size: cover;
+  background-position: center;
+  padding-top: 25px;
+  .card {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-img-top img {
+    width: 100%;
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    background-color: rgba(212, 212, 212, 0.5);
+    padding-left: 8px;
+    padding-top: 4px;
+  }
+  .dog-details {
+    text-transform: capitalize;
+  }
+  .card-body {
+    padding: 9px;
+  }
+  .dog-short-info {
+    margin-bottom: 2px;
+  }
+  .card-dog-description {
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(95% - 10px);
+    text-transform: capitalize;
+  }
+}
+
+// THANK YOU SECTION
+.search-bar {
+  padding: 20px;
+}
+
+.thank-you {
+  padding: 50px;
+}
+
+.Thankyou-container {
+  background-color: #faf8f5;
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}

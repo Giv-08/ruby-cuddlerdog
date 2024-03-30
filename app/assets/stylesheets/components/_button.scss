@@ -1,3 +1,8 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
+
 // this button is for dashboard button which will accept the request pending
 
 .button-positive{
@@ -48,7 +53,8 @@
   border: solid 2px #8D8C8A;
   border-style: outset;
 }
-.dogs-card{
+
+.dogs-card {
   border: #33170c;
   background-color: #F8FBE4;
   border-radius: 8px;
@@ -58,9 +64,8 @@
   p{
     margin: 4px;
   }
-
 }
-.card-footer{
+.card-footer {
   background-color:  #F8FBE4;
   align-items: center;
 }
@@ -69,12 +74,12 @@
   color: #000000;
 
 }
-.dog-name{
-  color: #F88151;
+.dog-name {
+  color: $eggplant;
   font-size: 24px;
 }
 
-.dogs-main-card:hover{
+.dogs-main-card:hover {
   border:solid #F88151 ;
   border-bottom-width: 3px;
   border-top-width: 1px;

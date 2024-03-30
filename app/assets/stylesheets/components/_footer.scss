@@ -1,20 +1,15 @@
-// .footer-text {
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-//   width: 100%;
-//   background-color: #F8FBE4;
-//   color: #8D8C8A;
-//   text-align: center;
-// }
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
 
 .footer-yellow {
   padding: 20px;
-    color: #8D8C8A;
-    background-color: #F8FBE4;
-    bottom: 0;
-    position: relative;
-    width: 100%;
+  color: $yellow;
+  background-color: $salmon;
+  bottom: 0;
+  position: relative;
+  width: 100%;
 }
 .footer-yellow h3 {
   margin-top:0;
@@ -64,8 +59,7 @@
 }
 
 p {
-  color: #989393;
-  text-shadow: 1px 1px #e7e7e7;
+  color: $yellow;
 }
 
 .footer-yellow .item.social {
@@ -73,29 +67,27 @@ p {
   margin-bottom: 10px;
 }
 
-@media (max-width:991px) {
-  .footer-yellow .item.social {
-    text-align:center;
-    margin-top:20px;
-  }
+i.icon {
+  position: relative;
+  top: 2px;
 }
 
 .footer-yellow .item.social > a {
-  font-size:22px;
-  width:36px;
-  height:36px;
-  line-height:36px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
-  margin:0 8px;
-  color:#F88151;
-  opacity:0.75;
+  font-size: 22px;
+  width: 36px;
+  line-height: 36px;
+  display: inline-flex;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  margin: 4px 1.5rem;
+  color: $eggplant;
+  opacity: 0.8;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .footer-yellow .item.social > a:hover {
-  opacity:0.9;
+  opacity:1;
 }
 
 .footer-yellow .copyright {
@@ -104,4 +96,11 @@ p {
   opacity:0.3;
   font-size:13px;
   margin-bottom:0;
+}
+
+@media (max-width:991px) {
+  .footer-yellow .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
 }

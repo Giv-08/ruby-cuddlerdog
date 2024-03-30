@@ -1,6 +1,12 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
+
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: #f8fbe4;
+  background: $salmon;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,7 +21,7 @@
   transition: 200ms ease-in-out;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: #8D8C8A;
+  color: $yellow;
   &:hover {
     color: #585858;
     text-shadow: 2px 2px 3px rgb(255, 255, 255);
