@@ -3,4 +3,11 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "banner";
+body {
+  background: #f3efeb;
+}
 
+@import "form";
+@import "footer";
+@import "button";

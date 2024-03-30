@@ -1,9 +1,6 @@
 class DogsController < ApplicationController
-  # def index
-  #   @dogs = Dog.all
-  # end
+  skip_before_action :authenticate_user!, only: :index
 
-  # index with filtering applied to list of dog.all
   def index
     @dogs = Dog.all
     if params[:breed].present?
@@ -59,7 +56,7 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :price, :id, :photo)
+    params.require(:dog).permit(:users_username, :name, :breed, :description, :price, :id, :photo)
   end
 
 end

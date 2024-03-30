@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #f8fbe4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,35 +8,47 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 110px;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  transition: 200ms ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #8D8C8A;
+  &:hover {
+    color: #585858;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+    background-color: #eff9a8db;
+    border-radius: 5px;
+  }
+}
+ul.nav.navbar-nav.d-flex.justify-content-between.w-70{
+  gap: 150px;
 }
 
-// < BANNER OVERLAY >
-// *{padding: 0; margin: 0; box-sizing: border-box;}
-// body{height: 900px;}
-// header {
-// 	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapercave.com/wp/wp7490789.jpg);
-// 	text-align: center;
-// 	width: 100%;
-// 	height: auto;
-// 	background-size: cover;
-// 	background-attachment: fixed;
-// 	position: relative;
-// 	overflow: hidden;
-// 	border-radius: 0 0 85% 85% / 30%;
-// }
+ #navbarSupportedContent {
+    position: relative;
+    right: 56px;
+ }
 
-// header .overlay{
-// 	width: 100%;
-// 	height: 40vh;
-// 	padding: 50px;
-// 	color: #FFF;
-// 	text-shadow: 1px 1px 1px #333;
-//   background-image: linear-gradient(135deg, #9f05ff40 10%, #9e08fd42 100%);
-
-// }
-
-// div.overlay {
-//   background-position: center;
-//   background-size: cover;
-// }
+ div.dropdown-menu.dropdown-menu-end {
+    left: -52px;
+    background: #F8FBE4;
+    border-radius: 6px;
+    border: 2px solid white;
+    a {
+      color: #8D8C8A;
+      text-align: center;
+    }
+    &:hover {
+      transition: 200ms ease-in-out;
+      text-shadow: 3px 3px 5px rgb(255, 250, 238);
+      background-color: #eff9a8db;
+    }
+    a:hover {
+      color: #bbbab9;
+      text-shadow: 2px 2px 3px rgb(255, 250, 238);
+      background-color: #eff9a8db;
+    }
+ }

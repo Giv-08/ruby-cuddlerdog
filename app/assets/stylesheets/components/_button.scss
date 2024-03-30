@@ -1,0 +1,83 @@
+// this button is for dashboard button which will accept the request pending
+
+.button-positive{
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #F88151;
+  font-weight: 500;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 80ms linear;
+  color: #F88151;
+
+}
+.button-positive:hover {
+  background: transparent;
+  color: #ae5c3b;
+  text-decoration: none;
+  border: solid 2px #F88151;
+  border-style: outset;
+}
+
+
+
+.button-negative{
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #8D8C8A;
+  font-weight: 500;
+  background: transparent;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 80ms linear;
+  color: #8D8C8A;
+}
+.button-negative:hover {
+  background: transparent;
+  color: solid #33170c;
+  text-decoration: none;
+  border: solid 2px #8D8C8A;
+  border-style: outset;
+}
+.dogs-card{
+  border: #33170c;
+  background-color: #F8FBE4;
+  border-radius: 8px;
+  margin: 12px;
+  align-items: center;
+
+  p{
+    margin: 4px;
+  }
+
+}
+.card-footer{
+  background-color:  #F8FBE4;
+  align-items: center;
+}
+.dashboard-heading{
+  font-size: 24px;
+  color: #000000;
+
+}
+.dog-name{
+  color: #F88151;
+  font-size: 24px;
+}
+
+.dogs-main-card:hover{
+  border:solid #F88151 ;
+  border-bottom-width: 3px;
+  border-top-width: 1px;
+  transition-duration: 2s;
+  transition: all 0.5s ease-in-out;
+}

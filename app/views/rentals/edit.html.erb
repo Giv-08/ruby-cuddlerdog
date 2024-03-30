@@ -1,11 +1,11 @@
+
 <h1>Edit rental</h1>
 <%= simple_form_for [@dog, @rental] do |f| %>
   <%= f.input :status %>
   <%= f.submit %>
 <% end %>
-
 <div class="button-container">
   <div class="btn">
-  <span><%= link_to "Back to rental lists", dog_rentals_path, class: "btn btn-primary" %></span>
+  <span><%= link_to "Back to rental lists", dog_rentals_path, class: "button-positive" %></span>
     </div>
 </div>

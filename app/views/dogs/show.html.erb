@@ -1,31 +1,40 @@
-<div class="title-dogname">
-    <h1>Welcome to <%= @dog.name %> page</h1>
-    <div>
-      <% if @dog.photo.attached? %>
-        <%= cl_image_tag @dog.photo.key, width: 500, height: 500, crop: :fill %>
-      <% else %>
-        <p><%= @dog.name %> is shy and doesn't have a picture yet🙈</p>
-      <% end %>
+<div class="container show-page">
+  <h1 class="show-dog-title">Welcome to <%= @dog.name %>'s Page</h1>
+
+  <div class="row">
+    <div class="dog-title-photo col-sm-12 col-md-6 justify-content-center">
+      <div class="dog-img">
+        <% if @dog.photo.attached? %>
+          <%= cl_image_tag @dog.photo.key, width: 500, height: 400, crop: :fill, gravity: :face, class: :rounded %>
+        <% else %>
+          <p><%= @dog.name %> is shy and doesn't have a picture yet 🙈</p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="body-footer col-sm-12 col-md-6 justify-content-center">
+      <div class="body">
+        <div class="body-doginfo">
+          <p><strong>Breed: </strong><%= @dog.breed %> </p>
+          <p><strong>Cost: </strong><%= @dog.price %></p>
+        </div>
+
+        <br>
+
+        <div class="description">
+          <p><strong>Little bit about our sweet <%= @dog.name %>, the <%= @dog.breed %> </strong></p>
+          <p class="show-dog-description"> <%= @dog.description %> </p>
+        </div>
+      </div>
+      <div class="footer-dogshowpage">
+        <% if current_user && current_user.id == @dog.user.id %>
+          <%= link_to 'Edit', edit_dog_path(@dog), class: 'button-positive' %>
+          <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'button-negative' %>
+        <% else %>
+          <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'button-positive' %>
+        <% end %>
+      </div>
     </div>
   </div>
 
-  <div class="body">
-    <div class="body-doginfo">
-      <p>Breed: <%= @dog.breed %> </p>
-      <p>Cost: <%= @dog.price %></p>
-    </div>
-    <div class="description">
-      <p>Little bit about our sweet <%= @dog.name %>, the <%= @dog.breed %> </p>
-      <p> <%= @dog.description %> </p>
-    </div>
-  </div>
-  <div class="footer">
-        <%# <%= link_to 'Main Page', dogs_path, class: 'btn btn-info' %>
-        <% if current_user && current_user.id == @dog.user.id %>
-          <%= link_to 'Edit', edit_dog_path(@dog), class: 'btn btn-info' %>
-          <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete #{ERB::Util.html_escape(@dog.name)}?"}, class: 'btn btn-secondary' %>
-        <% else %>
-          <%= link_to 'Rent this dog', new_dog_rental_path(@dog), class: 'btn btn-info' %>
-        <% end %>
-  </div>
 </div>
