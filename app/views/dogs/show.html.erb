@@ -5,7 +5,7 @@
     <div class="dog-title-photo col-sm-12 col-md-6 justify-content-center">
       <div class="dog-img">
         <% if @dog.photo.attached? %>
-          <%= cl_image_tag @dog.photo.key, width: 500, height: 400, crop: :fill, gravity: :face, class: :rounded %>
+          <%= cl_image_tag @dog.photo.key, width: 500, height: 400, crop: :fill, gravity: :face, class: :rounded, :cloud_name => "dbv8jpvj5" %>
         <% else %>
           <p><%= @dog.name %> is shy and doesn't have a picture yet 🙈</p>
         <% end %>

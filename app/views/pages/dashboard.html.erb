@@ -34,7 +34,7 @@
           <div class="card-body">
             <h2 class="dashboard-heading dog-name"><%= dog.name %></h2>
             <% if dog.photo.attached? %>
-              <%= cl_image_tag(dog.photo.key, width: 250, height: 200, crop: :fill, gravity: :face) %>
+              <%= cl_image_tag(dog.photo.key, width: 250, height: 200, crop: :fill, gravity: :face, cloud_name: "dbv8jpvj5") %>
             <% else %>
               <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
             <% end %>
