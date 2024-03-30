@@ -1,16 +1,16 @@
 development:
-  cloud_name: <%= ENV["dbv8jpvj5"] %>
-  api_key: <%= ENV["954474967841987"] %>
-  api_secret: <%= ENV["CJjJ9M-X3FHZUzkTQc2BX1NdSFE"] %>
+  cloud_name:dbv8jpvj5
+  api_key:954474967841987
+  api_secret:CJjJ9M-X3FHZUzkTQc2BX1NdSFE
   secure: true
 
 production:
-  cloud_name: "dbv8jpvj5"
-  api_key: "954474967841987"
-  api_secret: "CJjJ9M-X3FHZUzkTQc2BX1NdSFE"
+  cloud_name: 'dbv8jpvj5'
+  api_key: '954474967841987'
+  api_secret: 'CJjJ9M-X3FHZUzkTQc2BX1NdSFE'
   secure: true
 
-test:
-  cloud_name: <%= ENV["dbv8jpvj5"] %>
-  api_key: <%= ENV["954474967841987"] %>
-  api_secret: <%= ENV["CJjJ9M-X3FHZUzkTQc2BX1NdSFE"] %>
+# test:
+#   cloud_name: <%= ENV["dbv8jpvj5"] %>
+#   api_key: <%= ENV["954474967841987"] %>
+#   api_secret: <%= ENV["CJjJ9M-X3FHZUzkTQc2BX1NdSFE"] %>
