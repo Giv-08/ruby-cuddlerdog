@@ -1,0 +1,95 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
+
+#log-in {
+  text-align: center;
+  margin-top: 2rem;
+  color: $eggplant;
+}
+
+#sign-up {
+  text-align: center;
+  margin-top: 2rem;
+  color: $eggplant;
+}
+
+
+#forget-password{
+  text-align: center;
+  margin-top: 2rem;
+  color: $eggplant;
+}
+
+div.form-inputs {
+  width: 50%;
+}
+
+form.simple_form.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.btn {
+  color: $yellow;
+  background-color: $salmon;
+  border-radius: .5rem;
+  &:hover {
+    color: #956100;
+    background-color: #cf9684d4;
+  }
+}
+
+.log-in {
+  text-decoration: none;
+  color: $salmon;
+  background-color: #d5c56b;
+  border-radius: .5rem;
+  padding: 5px 10px;
+  &:hover {
+    text-decoration: none;
+    color: rgb(235, 127, 26);
+    background-color:  #faea8d;
+    transition: 300ms ease-in-out;
+  }
+}
+
+.sign-up {
+  text-decoration: none;
+  color: $salmon;
+  background-color: #d5c56b;
+  border-radius: .5rem;
+  padding: 5px 10px;
+  &:hover {
+    text-decoration: none;
+    color: rgb(235, 127, 26);
+    background-color:  #faea8d;
+    transition: 300ms ease-in-out;
+  }
+}
+
+.forget-password {
+  text-decoration: none;
+  color: $salmon;
+  background-color: #d5c56b;
+  border-radius: .5rem;
+  padding: 5px 10px;
+  &:hover {
+    text-decoration: none;
+    color:  rgb(235, 127, 26);
+    background-color:  #faea8d;
+    transition: 300ms ease-in-out;
+  }
+}
+
+div.auth-box {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    &:hover {
+      text-decoration: none;
+    }
+}

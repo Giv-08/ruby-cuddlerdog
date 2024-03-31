@@ -28,11 +28,11 @@ a.nav-link-auth {
 
 }
 .button-positive:hover {
-  background: transparent;
-  color: #ae5c3b;
+  background: #ffffff38;
+  transition: 300ms ease-in-out;
+  border: 1px solid #ff7700;
+  color: #ff7700;
   text-decoration: none;
-  border: solid 2px $salmon;
-  border-style: outset;
 }
 
 .button-negative{
@@ -41,7 +41,7 @@ a.nav-link-auth {
   display: inline-block;
   outline: 0;
   cursor: pointer;
-  border: 1px solid #8D8C8A;
+  border: 1px solid #008a85;
   font-weight: 500;
   background: transparent;
   padding: 8px;
@@ -49,14 +49,14 @@ a.nav-link-auth {
   border-radius: 4px;
   height: 36px;
   transition: all 80ms linear;
-  color: #8D8C8A;
+  color: #008a85;
 }
 .button-negative:hover {
-  background: transparent;
-  color: solid #33170c;
+  background: #ffffff38;
+  color: #01cec7;
+  border: 1px solid #01cec7;
+  transition: 300ms ease-in-out;
   text-decoration: none;
-  border: solid 2px #8D8C8A;
-  border-style: outset;
 }
 
 .dogs-card {
