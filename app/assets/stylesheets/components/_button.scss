@@ -3,8 +3,13 @@ $yellow: #F1D489;
 $salmon: #C98671;
 $eggplant: #874D62;
 
-// this button is for dashboard button which will accept the request pending
+// nav button
+a.nav-link-auth {
+  text-decoration: none;
+  color: $eggplant;
+}
 
+// this button is for dashboard button which will accept the request pending
 .button-positive {
   width: 100%;
   text-decoration: none;

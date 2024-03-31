@@ -31,6 +31,27 @@ $eggplant: #874D62;
   }
 }
 
+.navbar-light .navbar-nav .nav-link-auth {
+  color: $eggplant;
+  &:hover {
+    color: #c0a04f;
+    // text-shadow: 2px 2px 3px rgb(255, 255, 255);
+    // background-color: rgb(253, 238, 141);
+    border-radius: .5rem;
+    padding: 5px 10px;
+  }
+}
+
+ul.navbar-nav.me-auto {
+  gap: 1rem;
+}
+
+li.nav-item-auth {
+  background-color: #ffffff88;
+  border-radius: .5rem;
+  padding: 5px 10px;
+}
+
 ul.nav.navbar-nav.d-flex.justify-content-between.w-70{
   gap: 150px;
 }
