@@ -6,19 +6,19 @@
   <div class="dashboard-rental-request-container">
     <h2 class=" py-2 dashboard-heading">Rental requests:</h2>
     <% @rentals.each do |rental| %>
-      <div class="border p-2">
+      <div class="p-2">
         <% if rental.dog.user == current_user %>
         <% if rental.status == "pending" %>
-          <p>There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
+          <p id="status">There is one rental request for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
             <div class="button-container">
               <%= link_to "Approve", rental_path(rental, rental: {status: :approved}), data: {turbo_method: :patch}, class: "button-positive"%>
-              <%= link_to "decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch}, class: "button-negative" %></button>
+              <%= link_to "Decline", rental_path(rental, rental: {status: :declined}), data: {turbo_method: :patch}, class: "button-negative" %></button>
             </div>
           <% else %>
-          <div>You <%= rental.status  %> the offer </div>
+          <div>You <%= rental.status %> the offer </div>
         <% end %>
         <% else%>
-          <p>Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
+          <p id="status">Your request has been submitted for <%= rental.dog.name %> (status: <%= rental.status %>)</p>
         <% end %>
       </div>
     <% end %>

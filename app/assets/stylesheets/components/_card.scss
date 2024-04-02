@@ -160,3 +160,13 @@ $animationSpeed: 60s;
   flex-wrap: nowrap;
   justify-content: center;
 }
+
+div.dashboard-rental-request-container {
+  background-color: #f5f5dcb0;
+  border-radius: .5rem;
+  display: flex;
+  border: 2px solid white;
+  margin: 2rem;
+  flex-wrap: wrap;
+  align-items: center
+}
