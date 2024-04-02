@@ -30,17 +30,22 @@ $eggplant: #874D62;
     background-color: rgba(212, 212, 212, 0.5);
     padding-left: 8px;
     padding-top: 4px;
+    border-bottom-right-radius: .5rem;
   }
+
   .dog-details {
     text-transform: capitalize;
   }
+
   .card-body {
     padding: 9px;
   }
+
   .dog-short-info {
     margin-bottom: 2px;
     color: $yellow;
   }
+
   .card-dog-description {
     margin-bottom: 5px;
     text-overflow: ellipsis;
@@ -49,6 +54,11 @@ $eggplant: #874D62;
     width: calc(95% - 10px);
     text-transform: capitalize;
   }
+}
+
+.dogs-main-card:hover {
+  border: 2px solid rgb(255, 245, 183) ;
+  transition: all 200ms ease-in-out;
 }
 
 // THANK YOU SECTION
