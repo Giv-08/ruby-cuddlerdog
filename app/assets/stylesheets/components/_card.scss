@@ -61,6 +61,7 @@ $eggplant: #874D62;
   margin: 1rem 1rem;
   p {
     color: #d3a42d;
+    text-align: center;
   }
 }
 
@@ -137,5 +138,6 @@ $animationSpeed: 60s;
 	.slide {
 		height: 100px;
 		width: 250px;
+    margin-left: 1rem;
 	}
 }
