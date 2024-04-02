@@ -11,11 +11,17 @@ $eggplant: #874D62;
   color: #f88151;
   height: 80px;
   padding-top: 30px;
+  margin-top: 1rem;
 }
+
+div.show-dog-card.row {
+  margin-top: 2rem;
+}
+
 .dog-img {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   img {
   display: block;
   border-radius: 1rem;

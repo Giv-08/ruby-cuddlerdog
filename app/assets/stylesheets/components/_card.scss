@@ -152,3 +152,11 @@ $animationSpeed: 60s;
     margin-left: 1rem;
 	}
 }
+
+// dashboard
+.card-container {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}

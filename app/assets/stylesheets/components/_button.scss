@@ -27,8 +27,8 @@ a.nav-link-auth {
   transition: all 80ms linear;
   color: $salmon;
   text-align: center;
-
 }
+
 .button-positive:hover {
   background: #ffffff38;
   transition: 300ms ease-in-out;
@@ -53,6 +53,8 @@ a.nav-link-auth {
   transition: all 80ms linear;
   color: #008a85;
   text-align: center;
+}
+
 .button-negative:hover {
   background: #ffffff38;
   color: #01cec7;
@@ -60,11 +62,11 @@ a.nav-link-auth {
   transition: 300ms ease-in-out;
   text-decoration: none;
 }
-}
+
 
 .dogs-card {
   border: #33170c;
-  background-color: #F8FBE4;
+  background-color: $salmon;
   border-radius: 8px;
   margin: 12px;
   align-items: center;
@@ -98,5 +100,5 @@ a.nav-link-auth {
 }
 
 #topic {
-  color: rgb(26, 119, 89);
+  color: rgb(117, 230, 194);
 }
