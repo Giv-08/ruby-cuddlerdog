@@ -79,7 +79,11 @@ a.nav-link-auth {
 .card-footer {
   background-color:  #F8FBE4;
   align-items: center;
+  position: relative;
+  bottom: 2%;
+  border-radius: .5rem;
 }
+
 .dashboard-heading{
   font-size: 24px;
   color: #000000;
@@ -95,10 +99,43 @@ a.nav-link-auth {
   color: $orange;
 }
 
+.dashboard-heading.dog-name {
+  color: $eggplant;
+}
+
 #dog-name {
   color: $orange;
 }
 
 #topic {
   color: rgb(117, 230, 194);
+}
+
+.add-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.button-addlist {
+  text-decoration: none;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #C98671;
+  font-weight: 500;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 80ms linear;
+  color: #C98671;
+  text-align: center;
+  &:hover {
+  background: #ffffff38;
+  transition: 100ms ease-in-out;
+  border: 1px solid #ff7700;
+  color: #ff7700;
+  text-decoration: none;
+  }
 }

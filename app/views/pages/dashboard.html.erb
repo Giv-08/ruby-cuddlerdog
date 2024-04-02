@@ -1,5 +1,5 @@
 <div class="dashboard-header">
-  <h2 class="text-center py-2">Your dashboard</h2>
+  <h2 class="dash-header text-center py-2 mt-5">Your dashboard</h2>
 </div>
 
 <div class="container">
@@ -39,7 +39,7 @@
               <p><%= dog.name %> is shy and doesn't have a picture yet🙈</p>
             <% end %>
             <p>Breed : <%= dog.breed %></p>
-            <p>Price : <%= dog.price %></p>
+            <p>Price : $ <%= dog.price %></p>
             <p>Description : <%= dog.description %></p>
           </div>
           <div class="card-footer">
@@ -50,6 +50,8 @@
         </div>
       <% end %>
     </div>
-    <%= link_to "Add Dog to Listing", new_dog_path, class: "button-positive my-3" %>
+    <div class="add-btn-wrap">
+      <%= link_to "Add Dog to Listing", new_dog_path, class: "button-addlist my-3" %>
+    </div>
 </div>
 </div>
