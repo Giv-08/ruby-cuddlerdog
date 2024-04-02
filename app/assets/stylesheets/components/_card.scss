@@ -20,6 +20,7 @@ $eggplant: #874D62;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+    background-color: $salmon;
   }
   .card-img-top img {
     width: 100%;
@@ -58,7 +59,7 @@ $eggplant: #874D62;
 
 .dogs-main-card:hover {
   border: 2px solid rgb(255, 245, 183) ;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 // THANK YOU SECTION

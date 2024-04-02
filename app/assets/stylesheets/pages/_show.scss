@@ -1,3 +1,8 @@
+$blue: #A7D1CC; // background
+$yellow: #F1D489;
+$salmon: #C98671;
+$eggplant: #874D62;
+
 // Import page-specific CSS files here.
 
 // Welcome title with dog name
@@ -7,16 +12,21 @@
   height: 80px;
   padding-top: 30px;
 }
-.dog-img img {
+.dog-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  border-radius: 1rem;
+  width: 30vw;
+  }
 }
 
 .body-footer {
   padding: 50px 10px 30px 10px;
+  background-color: $eggplant;
+  border-radius: 1rem;
 }
 
 .body {
@@ -27,5 +37,7 @@
 }
 
 .footer-dogshowpage {
-  margin-left: 50px;
+  margin: 50px;
+  display: flex;
+  gap: 5rem;
 }

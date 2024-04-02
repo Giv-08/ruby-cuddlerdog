@@ -1,11 +1,11 @@
 <div class="container show-page">
   <h1 class="show-dog-title">Welcome to <%= @dog.name %>'s Page</h1>
 
-  <div class="row">
+  <div class="row mt-3">
     <div class="dog-title-photo col-sm-12 col-md-6 justify-content-center">
       <div class="dog-img">
         <% if @dog.photo.attached? %>
-          <%= cl_image_tag @dog.photo.key, width: 500, height: 400, crop: :fill, gravity: :face, class: :rounded, :cloud_name => "dbv8jpvj5" %>
+          <%= cl_image_tag @dog.photo.key, crop: :fill, gravity: :face, :cloud_name => "dbv8jpvj5" %>
         <% else %>
           <p><%= @dog.name %> is shy and doesn't have a picture yet 🙈</p>
         <% end %>
@@ -15,15 +15,12 @@
     <div class="body-footer col-sm-12 col-md-6 justify-content-center">
       <div class="body">
         <div class="body-doginfo">
-          <p><strong>Breed: </strong><%= @dog.breed %> </p>
-          <p><strong>Cost: </strong><%= @dog.price %></p>
+          <p><strong id="topic">Breed: </strong><%= @dog.breed %> </p>
+          <p><strong id="topic">Cost: </strong>$ <%= @dog.price %></p>
         </div>
-
-        <br>
-
         <div class="description">
-          <p><strong>Little bit about our sweet <%= @dog.name %>, the <%= @dog.breed %> </strong></p>
-          <p class="show-dog-description"> <%= @dog.description %> </p>
+          <p><strong id="topic">Little bit about our sweet <span id="dog-name"><%= @dog.name %></span>, the <span id="dog-breed"><%= @dog.breed %></span> </strong></p>
+          <p class="show-dog-description">Info: <%= @dog.description %> </p>
         </div>
       </div>
       <div class="footer-dogshowpage">
