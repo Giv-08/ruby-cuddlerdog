@@ -16,6 +16,7 @@ $orange: #f88151;
   background-color: $eggplant;
   padding: 1rem 4.5rem 4.5rem;
   border-radius: 1rem;
+  margin-bottom: 4rem;
 }
 
 section#contact.contact_section {
@@ -25,7 +26,7 @@ section#contact.contact_section {
 }
 
 #contact_me {
-  color: rgb(199, 112, 5);
+  color: white;
 }
 
 .contact_title {
@@ -72,6 +73,15 @@ textarea#message.contact_input {
 button.contact_btn {
   margin-top: 2rem;
   height: 2.5rem;
+  background-color: $salmon;
+  border: none;
+  border-radius: .5rem;
+  color: $yellow;
+  &:hover {
+    transition: 200ms ease-in-out;
+    background-color: rgb(252, 155, 122);
+    color: rgb(255, 232, 142);
+  }
 }
 
 div.contact_social {
