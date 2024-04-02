@@ -1,0 +1,58 @@
+<section class="contact_section" id="contact">
+  <div class="contact_container">
+    <h2 class="contact_title">
+      <span style="color: white;">Contact me</span>
+    </h2>
+</div>
+
+<div class="contact_mail">
+  <h2 class="contact_title">
+    Send Me A Message
+  </h2>
+
+  <form action="" class="contact_form" id="contact_form">
+    <div class="contact_grop">
+      <div class="contact_box contact_area">
+        <input type="text" name="user_name" class="contact_input" id="name" required placeholder="First Name">
+        <label for="name" class="contact_label">First Name</label>
+      </div>
+    </div>
+
+    <div class="contact_email">
+      <div class="contact_box contact_area">
+        <input type="text" name="user_email" class="contact_input" id="email" required placeholder="Email">
+        <label for="email" class="contact_label">Email</label>
+      </div>
+    </div>
+
+    <div class="contact_grop">
+      <div class="contact_box contact_area">
+        <input type="text" name="user_subject" class="contact_input" id="subject" required placeholder="Subject">
+        <label for="subject" class="contact_label">Subject</label>
+      </div>
+    </div>
+
+    <div class="contact_grop">
+      <div class="contact_box contact_area">
+        <textarea type="text" name="user_message" class="contact_input" id="message" required placeholder="Message"></textarea>
+        <label for="message" class="contact_label">Message</label>
+      </div>
+    </div>
+
+    <p class="contact_message" id="contact_message"></p>
+
+    <button class="contact_btn">
+      <i class='bx bx-mail-send' ></i> Send Message
+    </button>
+  </form>
+</div>
+<br>
+</section>
+
+
+
+</div>
+  <!-- EMAILJS -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
