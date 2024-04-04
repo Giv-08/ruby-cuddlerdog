@@ -15,7 +15,8 @@ module Cuddlerdog
       generate.test_framework :test_unit, fixture: false
     end
 
-    config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
+    # config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
+    config.secret_key_base = 'blipblapblup'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
