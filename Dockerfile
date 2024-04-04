@@ -83,7 +83,3 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
-
-if Rails.application.credentials.stripe
-  Stripe.api_key = Rails.application.credentials.stripe[:secret_key]
-end
