@@ -123,6 +123,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dockerfile-rails (1.6.7)
+      rails (>= 3.0.0)
     domain_name (0.6.20240107)
     dotenv (3.1.0)
     dotenv-rails (3.1.0)
@@ -311,6 +313,7 @@ DEPENDENCIES
   cloudinary
   debug
   devise
+  dockerfile-rails (>= 1.6)
   dotenv-rails
   error_highlight (>= 0.4.0)
   faker
@@ -330,7 +333,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.3.16

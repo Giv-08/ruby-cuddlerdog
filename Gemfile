@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-ruby "3.1.2"
+# ruby "3.1.2"
+ruby "3.3.0"
 
 # Use faker to seed dog db
 gem 'faker'
@@ -81,3 +82,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
