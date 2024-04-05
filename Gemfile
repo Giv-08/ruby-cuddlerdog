@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.1.2"
+ruby "3.2.1"
 
 # Use faker to seed dog db
 gem 'faker'
