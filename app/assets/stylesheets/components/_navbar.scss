@@ -3,6 +3,15 @@ $yellow: #F1D489;
 $salmon: #C98671;
 $eggplant: #874D62;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
 
 .navbar-lewagon {
   justify-content: space-between;
@@ -38,6 +47,12 @@ $eggplant: #874D62;
   }
 }
 
+div.navbar.elements {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 ul.navbar-nav.me-auto {
   gap: 1rem;
 }
@@ -58,8 +73,7 @@ ul.nav.navbar-nav.d-flex.justify-content-between.w-70{
 }
 
 ul.nav.navbar-nav {
-  position: relative;
-  gap: 8rem;
+  gap: 10rem;
 }
 
 div.dropdown-menu.dropdown-menu-end {

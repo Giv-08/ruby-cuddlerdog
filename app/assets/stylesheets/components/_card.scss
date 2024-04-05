@@ -82,13 +82,15 @@ $eggplant: #874D62;
 
 .thankyou-container {
   background-color: #faf8f5;
-  position: relative;
+  display: flex;
   border-radius: 10px;
   margin: 6rem;
+  justify-content: center;
 }
 
 .dog-pic {
-  width: 220px;
+  width: 17vw;
+  height: 100%;
   border-radius: 0.5rem;
 }
 

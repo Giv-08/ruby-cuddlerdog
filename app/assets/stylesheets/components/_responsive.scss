@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .dogs.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+}
