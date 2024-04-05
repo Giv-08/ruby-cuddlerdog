@@ -29,6 +29,10 @@ a.nav-link-auth {
   text-align: center;
 }
 
+.button-back-container {
+  display: flex;
+  justify-content: center;
+}
 .button-positive:hover {
   background: #ffffff38;
   transition: 300ms ease-in-out;

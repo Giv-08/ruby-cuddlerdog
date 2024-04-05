@@ -9,6 +9,8 @@ $eggplant: #874D62;
   box-sizing: border-box;
 }
 
+body, html { overflow-x:hidden; }
+
 body {
   min-height: 100vh;
 }
@@ -25,7 +27,7 @@ body {
 .navbar-lewagon .navbar-brand img {
   width: 110px;
   position: absolute;
-  left: 30px;
+  left: 3rem;
   top: 20px;
   transition: 200ms ease-in-out;
 }
@@ -49,8 +51,8 @@ body {
 
 div.navbar.elements {
   width: 100%;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 ul.navbar-nav.me-auto {
