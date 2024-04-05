@@ -1,1 +1,1 @@
-web: bundle exec rails server thin -p $PORT -e $RACK_ENV
+rake db:migrate && RAILS_ENV=production bin/rails server -b 0.0.0.0 -p ${PORT:-3000}
