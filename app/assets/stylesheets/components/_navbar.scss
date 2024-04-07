@@ -18,6 +18,7 @@ body {
 .navbar-lewagon {
   justify-content: space-between;
   background: $salmon;
+  height: 7%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -60,6 +61,8 @@ ul.navbar-nav.me-auto {
 }
 
 li.nav-item-auth {
+  width: 75px;
+  text-align: center;
   background-color: #ffffff88;
   border-radius: .5rem;
   padding: 5px 10px;
