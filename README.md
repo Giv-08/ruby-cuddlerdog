@@ -1,3 +1,5 @@
+
+
 How to run the app:
 ## Install Ruby (if not already installed)
 For Windows: Use the RubyInstaller to install Ruby.
@@ -30,4 +32,4 @@ ruby app.rb
 ruby <filename>.rb
 ```
 ### Access the Application
-Open your browser and navigate to the port the application is running on. If you're using Rails, for example, it will be # http://localhost:3000.
+Open your browser and navigate to the port the application is running on. If you're using Rails, for example, it will be http://localhost:3000.
