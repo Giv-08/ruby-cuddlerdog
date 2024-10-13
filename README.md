@@ -32,7 +32,7 @@ ruby app.rb
 ```
 ruby <filename>.rb
 ```
-### Access the Application
+# Access the Application
 Open your browser and navigate to the port the application is running on. If you're using Rails, for example, it will be http://localhost:3000.
 ---------------------------------------------
 For a dog rental service, some core features could include:
@@ -47,11 +47,49 @@ To build the full-stack web app, you can use a combination of the following tech
 # Frontend (Client-Side):
 ```
 HTML/CSS: For structure and styling.
-JavaScript/TypeScript: For interactive elements.
-React.js: A popular JavaScript library for building user interfaces.
+JavaScript: For interactive elements.
 SCSS: For easy, utility-first CSS styling.
 ```
 # Backend (Server-Side):
 ```
 Ruby on Rails: As the backend framework to handle APIs, routing, and business logic.
 PostgreSQL: For the database to store information about users, dogs, and bookings.
+```
+# Authentication:
+```
+Devise (Rails) for secure user authentication and session management.
+```
+# Hosting:
+```
+Netlify: For hosting the frontend.
+```
+
+# DogCuddler allows you to log in and sign up (register):
+Feature Overview:
+This feature enables users to either sign up for a new account or log in to their existing account. It's essential for personalizing the experience and managing their activities, like booking dogs, viewing history, and more.
+<img width="1787" alt="login" src="https://github.com/user-attachments/assets/64ea5407-9e69-4ee8-a772-042c0b3fbf25">
+
+# DogCuddler allows you to search by filtering dog breeds and min/max prices:
+Feature Overview:
+This feature allows users to search and filter the available dogs based on criteria such as the breed and the rental price range.
+<img width="1792" alt="filter_search" src="https://github.com/user-attachments/assets/28341117-dd37-4758-9aae-36001890fdf2">
+
+# DogCuddler allows you to edit or update dog details:
+Feature Overview:
+This feature is mainly for dog owners who list their dogs for rent. They need the ability to update or edit the details of their dog listings, such as changing the dog’s availability, updating the price, or modifying the description.
+<img width="1788" alt="edit_info" src="https://github.com/user-attachments/assets/5067bd12-6302-4ec6-845d-fb4139144c9a">
+
+
+# DogCuddler allows you to view the dashboard, including approve or decline the rentals:
+Feature Overview:
+The dashboard is a central feature for both dog owners and users (renters). It allows them to manage their activities:
+<img width="1789" alt="dashboard" src="https://github.com/user-attachments/assets/66fc1e72-52ec-4724-bf73-cfffc5bfc736">
+
+![Uploading banner.png…]()
+
+---------------------------------
+# Developed by Le Wagon Students
+Debbie Lee
+Chutima Puthachon
+Kara Yu
+Manisha Parajuli
