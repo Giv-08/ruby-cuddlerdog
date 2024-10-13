@@ -1,4 +1,5 @@
 
+<img width="1758" alt="index" src="https://github.com/user-attachments/assets/4ddcfeb2-4714-4810-a626-94e631d3337d">
 
 How to run the app:
 ## Install Ruby (if not already installed)
@@ -33,3 +34,24 @@ ruby <filename>.rb
 ```
 ### Access the Application
 Open your browser and navigate to the port the application is running on. If you're using Rails, for example, it will be http://localhost:3000.
+---------------------------------------------
+For a dog rental service, some core features could include:
+- User Registration/Login: Users (customers) should be able to sign up, log in, and manage their profiles.
+- Dog Listing: A list of available dogs, including details like breed, age, availability, price, and pictures.
+- Booking System: Allow users to rent dogs for specific dates and times.
+- Payments: Secure payments for renting dogs (e.g., using Stripe or PayPal).
+- Owner Dashboard: Dog owners can manage their listings, add new dogs, update availability, and see bookings.
+
+### Tech Stack for Full-Stack App
+To build the full-stack web app, you can use a combination of the following technologies:
+# Frontend (Client-Side):
+```
+HTML/CSS: For structure and styling.
+JavaScript/TypeScript: For interactive elements.
+React.js: A popular JavaScript library for building user interfaces.
+SCSS: For easy, utility-first CSS styling.
+```
+# Backend (Server-Side):
+```
+Ruby on Rails: As the backend framework to handle APIs, routing, and business logic.
+PostgreSQL: For the database to store information about users, dogs, and bookings.
