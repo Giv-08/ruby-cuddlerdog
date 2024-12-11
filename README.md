@@ -62,10 +62,7 @@ PostgreSQL: For the database to store information about users, dogs, and booking
 ```
 Devise (Rails) for secure user authentication and session management.
 ```
-## Hosting:
-```
-Netlify: For hosting the frontend.
-```
+
 
 ### :guide_dog: DogCuddler allows you to log in and sign up (register):
 Feature Overview:
